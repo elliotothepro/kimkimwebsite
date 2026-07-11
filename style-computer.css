@@ -56,3 +56,14 @@ body.computer-page {
 }
 
 .back-link:hover { color: #0052a3; }
+
+@media (max-width: 768px) {
+  .computer-buttons {
+    gap: 16px;
+  }
+
+  .computer-btn {
+    width: 96px;
+    height: 96px;
+  }
+}
