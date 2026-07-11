@@ -2,21 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;900&display=swap');
 
 body {
+  position: relative;
   font-family: "Courier New", Courier, monospace;
   font-weight: 700;
   color: #040453;
   margin: 40px;
   text-align: center;
   cursor: url("images/cursor/rhnormalhands.png"), auto;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background-image: url("images/about/aboutbg.jpeg");
-  background-attachment: fixed;
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
 }
 
 @media (min-width: 769px) {
-  body {
+  body::before {
     background-size: 100% auto;
   }
 }
