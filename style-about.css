@@ -1,0 +1,99 @@
+/* About page styles */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;900&display=swap');
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  color: #040453;
+  margin: 40px;
+  text-align: center;
+  cursor: url("images/cursor/rhnormalhands.png"), auto;
+  background-image: url("images/about/aboutbg.jpeg");
+  background-attachment: fixed;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 769px) {
+  body {
+    background-size: 100% auto;
+  }
+}
+
+.tile-button,
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"],
+[role="button"] {
+  cursor: url("images/cursor/rhlinkselect.png"), pointer;
+}
+
+/* Huge, stretched ABOUT ME title that reaches the screen edges */
+.title-main {
+  font-family: 'Syne Mono', sans-serif;
+  font-weight: 900;
+  font-size: 16vw;
+  margin: 0 0 10rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  width: min(90vw, 100%);
+  max-width: 100%;
+  letter-spacing: 0.05em;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.mobile-break {
+  display: none;
+}
+
+.title-main::after {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .title-main {
+    font-size: 22vw;
+    width: 85vw;
+    white-space: normal;
+  }
+  .mobile-break {
+    display: block;
+    height: 0;
+    line-height: 0;
+  }
+}
+
+/* Paragraphs */
+/* Paragraphs: white text with blue rectangle highlight behind the text */
+p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #040453;
+  display: block;
+  width: min(90%, 800px);
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.2rem;
+  text-align: center;
+}
+
+p:nth-of-type(1) {
+  margin-bottom: 2000px;
+}
+
+p:nth-of-type(2) {
+  margin-bottom: 2000px;
+}
+
+/* Ensure the title keeps the blue color and no highlight */
+.title-main {
+  color: #040453;
+  background: none;
+}
+
+a { text-decoration: none; color: inherit; font-size: 1.2rem; text-decoration: underline; }

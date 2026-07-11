@@ -1,0 +1,176 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: #0f130b;
+  position: relative;
+  font-size: 20px;
+  font-family: "w95fa", "VT323", "Fira Mono", "Consolas", "monospace";
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-image: url('../images/computer-bg.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+p {
+  line-height: 1.6em; /*I find the default HTML line-height tends to be a bit claustrophobic for main text*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.right {
+  float: right;
+  margin-left: 1em;
+}
+.left {
+  float: left;
+  margin-right: 1em;
+}
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .small {
+    max-width: 60%;
+    height: auto;
+  }
+}
+.caption {
+  margin-top: 0;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+a {
+  color: #1100ff;
+}
+a:hover { 
+  background-color: #dbd4ff;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #0f0044;
+}
+
+hr {
+  border-width: 2px 0 0 0;
+  border-style: dashed;
+  border-color: #000000; 
+}
+
+/*#CONTAINER is the rectangle that has contains everything but the background!*/
+#container {
+  margin: 3em auto;
+  width: 90%;
+	max-width: 700px;
+	background-color: rgb(255, 255, 255);
+  color: #000000; 
+  outline-color: #c0c0c0;
+  outline-style: ridge;
+  outline-width: 8px;
+  outline-offset: 0;
+}
+
+#content {
+  padding: 10px 5% 20px 5%;
+}
+
+
+/*HEADER STYLE*/
+#header {
+  background-color: #c0c0c0;
+  padding: 0 5%;
+}
+#header ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+#header li:last-child {
+  margin-left: auto;
+}
+#header li:last-child a {
+  color: rgb(207, 0, 0);
+}
+#header li {
+  font-size: 0.96em;
+  display: inline-block;
+  margin-right: 0.2em;
+  margin-bottom: 0.8em;
+  margin-top: 0.8em;
+}
+#header li a {
+  color: rgb(0, 0, 0);
+  background-color: #c0c0c0;
+  border-width: 0.3em;
+  border-style: outset;
+  border-color: #9b9b9b;
+  padding: 0.3em 1.5em 0.2em 0.5em;
+  text-decoration: none;
+  font-weight: bold;
+}
+#header li a:hover {
+  background-color: #a1afff;
+  border-color: #9195c7;
+}
+#header li a:active {
+  background-color: #000155;
+  border-color: #080050;
+  color: rgb(255, 255, 255);
+}
+
+/*POST LIST STYLE*/
+#postlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+}
+#recentpostlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+}
+.moreposts {
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+/*NEXT AND PREVIOUS LINKS STYLE*/
+#nextprev {
+  text-align: center;
+  margin-top: 1.4em;
+}
+
+/*DISQUS STYLE*/
+#disqus_thread {
+  margin-top: 1.6em;
+}
+
+/*FOOTER STYLE*/
+#footer {
+  font-size: 0.8em;
+  padding: 0 5% 10px 5%;
+}
